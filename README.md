@@ -32,7 +32,7 @@ A robust Node.js/Express REST API for detecting and reporting spam phone numbers
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Rahulstark2/spam-detection-backend.git
+git clone https://github.com/Rahulstark2/spam-detection-api.git
 cd spam-detection-backend
 ```
 
