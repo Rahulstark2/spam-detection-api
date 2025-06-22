@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int       @id @default(autoincrement())
+  name        String
+  phoneNumber String    @unique
+  email       String?
+  password    String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+
+  contacts    Contact[]
+  
+
+  spamReports SpamReport[]
+  
+  @@map("users")
+  @@index([name])
+}
+
+model Contact {
+  id          Int    @id @default(autoincrement())
+  name        String
+  phoneNumber String
+  userId      Int
+  
+  user        User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, phoneNumber])
+  @@map("contacts")
+  @@index([name])
+  @@index([phoneNumber])
+}
+
+model SpamReport {
+  id          Int      @id @default(autoincrement())
+  phoneNumber String
+  reportedBy  Int
+  createdAt   DateTime @default(now())
+  
+  user        User     @relation(fields: [reportedBy], references: [id], onDelete: Cascade)
+  
+  @@unique([phoneNumber, reportedBy])
+  @@map("spam_reports")
+  @@index([phoneNumber])
+}
