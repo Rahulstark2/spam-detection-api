@@ -12,7 +12,7 @@ A robust Node.js/Express REST API for detecting and reporting spam phone numbers
 - ** Analytics**: Spam report counting and likelihood calculation
 - ** Production Ready**: Optimized for Vercel deployment
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: Node.js, Express.js
 - **Database**: PostgreSQL with Prisma ORM
@@ -21,18 +21,18 @@ A robust Node.js/Express REST API for detecting and reporting spam phone numbers
 - **Security**: Helmet, CORS, Rate limiting
 - **Deployment**: Vercel ready
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v16 or higher)
 - PostgreSQL database
 - npm or yarn package manager
 
-## �� Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/spam-detection-backend.git
+git clone https://github.com/Rahulstark2/spam-detection-backend.git
 cd spam-detection-backend
 ```
 
