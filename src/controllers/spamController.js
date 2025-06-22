@@ -49,7 +49,13 @@ const reportSpam = async (req, res) => {
 
 const getSpamStatus = async (req, res) => {
   try {
-    const { phoneNumber } = req.query;
+    let { phoneNumber } = req.query;
+
+    if (phoneNumber && phoneNumber.startsWith(' ')) {
+      phoneNumber = '+' + phoneNumber.substring(1);
+    }
+
+    console.log('Checking spam status for phone number:', phoneNumber); 
 
     const spamCount = await prisma.spamReport.count({
       where: { phoneNumber },
