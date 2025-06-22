@@ -48,7 +48,7 @@ Create a `.env` file in the root directory:
 
 ```env
 # Database
-DATABASE_URL="postgresql://username:password@localhost:5432/spam_detection"
+DATABASE_URL="postgresql://username:password@localhost:5432/spam_detection" or your NeonDB PostgreSQL connection string
 
 # JWT Configuration
 JWT_SECRET="your-super-secret-jwt-key-at-least-12-characters"
