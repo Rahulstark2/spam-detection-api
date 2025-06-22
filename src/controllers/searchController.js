@@ -158,10 +158,15 @@ const searchByName = async (req, res) => {
 
 const searchByPhone = async (req, res) => {
   try {
-    const { phoneNumber } = req.query;
+    let { phoneNumber } = req.query;
     const userId = req.user.id;
 
-    
+    if (phoneNumber && phoneNumber.startsWith(' ')) {
+      phoneNumber = '+' + phoneNumber.substring(1);
+    }
+
+    console.log('Searching for phone number:', phoneNumber); 
+
     const registeredUser = await prisma.user.findUnique({
       where: { phoneNumber },
       select: {
