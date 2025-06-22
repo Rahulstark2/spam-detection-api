@@ -5,12 +5,12 @@ A robust Node.js/Express REST API for detecting and reporting spam phone numbers
 ## Features
 
 - ** Phone Number Spam Detection**: Report and check spam status of phone numbers
-- **�� JWT Authentication**: Secure user registration and login
-- **�� Contact Management**: Store and manage user contacts
-- **🔍 Smart Search**: Search by name or phone number with spam likelihood
-- **🛡️ Security**: Rate limiting, CORS, Helmet middleware
-- **📊 Analytics**: Spam report counting and likelihood calculation
-- **🚀 Production Ready**: Optimized for Vercel deployment
+- ** JWT Authentication**: Secure user registration and login
+- ** Contact Management**: Store and manage user contacts
+- ** Smart Search**: Search by name or phone number with spam likelihood
+- ** Security**: Rate limiting, CORS, Helmet middleware
+- ** Analytics**: Spam report counting and likelihood calculation
+- ** Production Ready**: Optimized for Vercel deployment
 
 ## 🛠️ Tech Stack
 
