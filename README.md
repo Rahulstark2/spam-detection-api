@@ -87,7 +87,7 @@ npm start
 
 The server will start on `http://localhost:3000`
 
-## 📚 API Documentation
+## API Documentation
 
 ### Authentication Endpoints
 
@@ -214,7 +214,7 @@ GET /health
 }
 ```
 
-## 🔧 Database Schema
+## Database Schema
 
 ### Users Table
 - `id` (Primary Key)
@@ -237,49 +237,8 @@ GET /health
 - `reportedBy` (Foreign Key to Users)
 - `createdAt` (DateTime)
 
-## �� Deployment
 
-### Deploy to Vercel
-
-1. **Install Vercel CLI**
-```bash
-npm install -g vercel
-```
-
-2. **Login to Vercel**
-```bash
-vercel login
-```
-
-3. **Deploy**
-```bash
-vercel --prod
-```
-
-4. **Set Environment Variables**
-```bash
-vercel env add DATABASE_URL
-vercel env add JWT_SECRET
-vercel env add JWT_EXPIRES_IN
-vercel env add NODE_ENV
-```
-
-5. **Run Database Migrations**
-```bash
-vercel env pull .env.local
-npx prisma migrate deploy
-```
-
-### Environment Variables for Production
-
-Make sure to set these in your Vercel dashboard:
-- `DATABASE_URL`: Your PostgreSQL connection string
-- `JWT_SECRET`: Strong secret key (at least 12 characters)
-- `JWT_EXPIRES_IN`: Token expiration (e.g., "7d")
-- `NODE_ENV`: "production"
-- `ALLOWED_ORIGINS`: Your frontend domain(s)
-
-## 🔒 Security Features
+## Security Features
 
 - **Rate Limiting**: 100 requests per 15 minutes (general), 5 requests per 15 minutes (auth)
 - **CORS Protection**: Configurable allowed origins
@@ -288,48 +247,14 @@ Make sure to set these in your Vercel dashboard:
 - **Password Hashing**: bcrypt with salt rounds
 - **JWT Authentication**: Secure token-based auth
 
-## �� Testing
-
-```bash
-# Run tests (if implemented)
-npm test
-
-# Health check
-curl http://localhost:3000/health
-```
-
-## �� API Rate Limits
+## API Rate Limits
 
 - **General endpoints**: 100 requests per 15 minutes
 - **Authentication endpoints**: 5 requests per 15 minutes
 - **Search endpoints**: 100 requests per 15 minutes
 
-## 🤝 Contributing
+## Links
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- [Live Demo](https://spam-detection-backend-zeta.vercel.app/)
 
-## 📄 License
-
-This project is licensed under the ISC License.
-
-## 🆘 Support
-
-If you encounter any issues:
-
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed information
-3. Include error logs and steps to reproduce
-
-## 🔗 Links
-
-- [Live Demo](https://your-app.vercel.app)
-- [API Documentation](https://your-app.vercel.app/docs)
-- [Vercel Dashboard](https://vercel.com/dashboard)
-
----
-
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Rahul Roy Chowdhury]
